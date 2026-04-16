@@ -1,0 +1,53 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  body {
+    @apply bg-surface text-white font-sans antialiased;
+    font-family: 'Inter', system-ui, sans-serif;
+  }
+
+  * {
+    @apply border-white/10;
+  }
+}
+
+@layer components {
+  .card {
+    @apply bg-surface-card rounded-xl border border-white/5 p-4;
+  }
+
+  .badge-buy {
+    @apply inline-flex items-center px-2.5 py-0.5 rounded-full text-xs font-semibold bg-buy/20 text-buy border border-buy/30;
+  }
+
+  .badge-hold {
+    @apply inline-flex items-center px-2.5 py-0.5 rounded-full text-xs font-semibold bg-hold/20 text-hold border border-hold/30;
+  }
+
+  .badge-avoid {
+    @apply inline-flex items-center px-2.5 py-0.5 rounded-full text-xs font-semibold bg-avoid/20 text-avoid border border-avoid/30;
+  }
+
+  .stat-label {
+    @apply text-xs text-white/50 uppercase tracking-wider mb-1;
+  }
+
+  .stat-value {
+    @apply text-lg font-semibold text-white;
+  }
+
+  .score-ring {
+    @apply relative inline-flex items-center justify-center;
+  }
+}
+
+@layer utilities {
+  .text-positive { @apply text-buy; }
+  .text-negative { @apply text-avoid; }
+  .scrollbar-thin {
+    scrollbar-width: thin;
+    scrollbar-color: rgba(255,255,255,0.1) transparent;
+  }
+}
